@@ -1,8 +1,10 @@
 <?php 
-    $paragraph = $_GET["paragraph"];
-    $word = $_GET["word"];
+    $paragraph = $_GET['paragraph'];
+    $word = $_GET['word'];
 
     var_dump($paragraph, $word);
+
+    $censored_paragraph = str_replace($word, '***', $paragraph);
 ?>
 
 
@@ -17,6 +19,19 @@
     <title>Document</title>
 </head>   
 <body>
-
+    <div class="container">
+        <div class="row gy-3">
+            <div class="col-12">
+                <h3>Paragrafo originario e sua lunghezza</h3>
+                <p><?php echo $paragraph; ?></p>
+                <p>Lunghezza del paragrafo: <?php echo strlen($paragraph); ?></p>
+            </div>
+            <div class="col-12">
+                <h3>Paragrafo censurato e sua lunghezza</h3>
+                <p><?php echo $censored_paragraph; ?></p>
+                <p>Lunghezza del paragrafo: <?php echo strlen($censored_paragraph); ?></p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
