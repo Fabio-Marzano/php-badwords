@@ -22,7 +22,7 @@
     <div class="container">
         <div class="row gy-3">
             <div class="col-12">
-                <h3>Paragrafo originario e sua lunghezza</h3>
+                <h3>Paragrafo originario e la sua lunghezza</h3>
                 <p><?php echo $paragraph; ?></p>
                 <p>Lunghezza del paragrafo: <?php echo strlen($paragraph); ?></p>
             </div>
